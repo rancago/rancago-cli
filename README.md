@@ -1,11 +1,22 @@
 # rancago-cli
 
-> Standalone CLI for the [Rancago Framework](https://github.com/rancago/rancago) — code generators, scaffolding, and development utilities.
+> Standalone CLI for the [RANCAGO Framework](https://github.com/rancago/rancago) - code generators, scaffolding, and development utilities.
 
 [![Go Version](https://img.shields.io/badge/Go-1.23%2B-00ADD8?style=flat-square&logo=go)](https://go.dev)
 [![Module](https://img.shields.io/badge/module-github.com%2Francago%2Francago--cli-blue?style=flat-square)](https://github.com/rancago/rancago-cli)
 
-This binary is **independent from the framework** — zero dependency on `rancago/framework`. It generates files in whatever Go project you run it from, reading the module name from the local `go.mod`.
+This binary is **independent from the framework** - zero dependency on `rancago/framework`. It generates files in whatever Go project you run it from, reading the module name from the local `go.mod`.
+
+---
+
+## About RANCAGO
+
+**RANCAGO** = **R**esilient, **A**gnostic, & **N**ative **C**lean-**A**rchitecture **G**O Framework.
+
+The name also draws from Sundanese roots:
+
+- **Rancagé** — *skilled, precise, structured craftsmanship* → how Rancago enforces SOLID and hexagonal architecture step by step.
+- **Ranca** — *a fertile, expansive wetland ecosystem* → the rich built-in feature set: pgvector, Redis, MinIO, Google Drive, Meet, Calendar, OAuth, RBAC.
 
 ---
 
@@ -57,14 +68,14 @@ SCAFFOLD
     --no-interactive                Skip prompts; use --entity/--repo/--usecase/--http/--grpc flags
 
 MIGRATIONS
-  migrate                           Run pending migrations (stub — wire a GORM adapter)
+  migrate                           Run pending migrations (stub - wire a GORM adapter)
   migrate --rollback                Rollback last batch
 
 UTILITIES
   key:generate                      Generate a cryptographically secure APP_KEY
   storage:link                      Symlink public/storage → storage/app/public
   route:list                        Print all registered routes (HTTP + gRPC + WS)
-  tinker                            Interactive REPL — explore container bindings and ports
+  tinker                            Interactive REPL - explore container bindings and ports
 
   help                              Show this help
   version / -v                      Show version
@@ -150,16 +161,16 @@ rancago key:generate
 
 All `make:*` and `scaffold` commands read the module name from `go.mod` in the current working directory and generate idiomatic Go files following the Rancago hexagonal architecture layout. No network access, no side effects beyond writing files.
 
-The `serve` command delegates to the project's own `go run .` — the CLI does not embed a server.
+The `serve` command delegates to the project's own `go run .` - the CLI does not embed a server.
 
 ---
 
 ## Related
 
-- [rancago/rancago](https://github.com/rancago/rancago) — the full framework
+- [rancago/rancago](https://github.com/rancago/rancago) - the full framework
 
 ---
 
 ## License
 
-Proprietary — Ikhwal © 2026. rancago-cli 1.0.0.
+Proprietary - Muhammad Ikhwan Fathulloh © 2026. rancago-cli 1.0.0.
