@@ -15,8 +15,8 @@ This binary is **independent from the framework** - zero dependency on `rancago/
 
 The name also draws from Sundanese roots:
 
-- **Rancagé** — *skilled, precise, structured craftsmanship* → how Rancago enforces SOLID and hexagonal architecture step by step.
-- **Ranca** — *a fertile, expansive wetland ecosystem* → the rich built-in feature set: pgvector, Redis, MinIO, Google Drive, Meet, Calendar, OAuth, RBAC.
+- **Rancagé** - *skilled, precise, structured craftsmanship* → how Rancago enforces SOLID and hexagonal architecture step by step.
+- **Ranca** - *a fertile, expansive wetland ecosystem* → the rich built-in feature set: pgvector, Redis, MinIO, Google Drive, Meet, Calendar, OAuth, RBAC.
 
 ---
 
