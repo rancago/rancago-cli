@@ -61,6 +61,9 @@ func RunCLI() int {
 	case "scaffold":
 		return run(NewScaffoldCommand(), args)
 
+	case "make:feature":
+		return run(NewMakeFeatureCommand(), args)
+
 	case "make:entity":
 		return run(NewMakeEntityCommand(), args)
 
@@ -106,9 +109,9 @@ func RunCLI() int {
 	default:
 		if strings.HasPrefix(cmd, "make:") {
 			fmt.Fprintf(os.Stderr, "Unknown make command: %s\n", cmd)
-			fmt.Fprintln(os.Stderr, "Available: make:entity, make:value-object, make:port, make:usecase,")
-			fmt.Fprintln(os.Stderr, "           make:adapter, make:model, make:migration, make:controller,")
-			fmt.Fprintln(os.Stderr, "           make:middleware, make:provider")
+			fmt.Fprintln(os.Stderr, "Available: make:feature, make:entity, make:value-object, make:port,")
+			fmt.Fprintln(os.Stderr, "           make:usecase, make:adapter, make:model, make:migration,")
+			fmt.Fprintln(os.Stderr, "           make:controller, make:middleware, make:provider")
 			return 1
 		}
 		fmt.Fprintf(os.Stderr, "Unknown command: %s  (try: rancago help)\n", cmd)
@@ -128,6 +131,7 @@ func printHelp() {
 		{"serve", "Start the HTTP (and optional gRPC) development server"},
 		{"migrate", "Run database migrations"},
 		{"scaffold [name]", "Interactive scaffolder for a full bounded context"},
+		{"make:feature [name]", "Scaffold feature + generate docs/features/<name>.md"},
 		{"", ""},
 		{"Code generators:", ""},
 		{"  make:entity [name]", "Domain entity (internal/domain/entities)"},
